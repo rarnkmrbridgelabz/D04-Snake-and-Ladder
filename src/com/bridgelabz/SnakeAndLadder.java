@@ -10,6 +10,7 @@ public class SnakeAndLadder {
 
 		int position = 0;
 		int winningPosition = 100;
+		int count = 0;
 
 		while (position < winningPosition) {
 
@@ -22,6 +23,7 @@ public class SnakeAndLadder {
 			// 2 -> Snake
 			switch (checkpoint) {
 			case 0:
+				System.out.println("No Change in Position");
 				break;
 			case 1:
 				if (position + diceroll <= winningPosition) {
@@ -38,9 +40,10 @@ public class SnakeAndLadder {
 				}
 				break;
 			}
-
+			count++;
+			System.out.println("The Diceroll times is " + count);
 			System.out.println("Your position is " + position);
-			System.out.println(" ");
+			System.out.println();
 
 		}
 	}
